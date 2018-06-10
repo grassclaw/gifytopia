@@ -9,7 +9,7 @@ function getStorage() {
   // Checks to see if we have any movies in localStorage
   // If we do, set the local list variable to our default movies
   if (!Array.isArray(movielist)) {
-    movielist = ["Sharknado", "Forrest Gump", "Stargate", "Jurassic Park"];
+    movielist = ["Sharknado", "Avengers", "Stargate", "Jurassic Park"];
     sessionStorage.setItem("movielist", JSON.stringify(movielist));
   }
 
@@ -22,7 +22,7 @@ function addButton(movielist) {
     // creates a button with the movie on it
     var p = $('<button class="movie" value="' + movielist[i] + '">').text(movielist[i]);
     // adds a delete button which will prepend to the movie button = multi function button
-    var b = $("<button class='delete'>").text("delete").attr("data-index", i);
+    var b = $("<button class='delete'>").text("X").attr("data-index", i);
     // prepends delete button to movie
     p.prepend(b);
     // prepends multi function button to jumbotron
